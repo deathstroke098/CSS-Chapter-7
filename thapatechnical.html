@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thapa Grids</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: aquamarine;
+        }
+
+        .container {
+            width: 79%;
+            margin: 60px auto;
+            border: 8px solid black;
+            /* padding: 37px 53px; */
+            display: grid;
+            /* grid template rows me hame pehli row 60px ki chahiye , second row 100px ki chahiye , third sabse moti 200px ki chahiye or last row 60px ki chahiye .... */
+            grid-template-rows: 60px 100px 200px 60px;
+            /* grid template colums me hme 3 colums chahiye or last wala column sabse patla chahiye to uski pixel define krdi hai  */
+            grid-template-columns: repeat(3, 1fr) 100px;
+            grid-gap: 10px;
+            text-align: center;
+            font-size: 45px;
+
+        }
+
+        .div1 {
+            background-color: rgb(255, 51, 0);
+            grid-column: 1/span 4;
+            border: 3px solid black;
+        }
+
+        .div2 {
+            background-color: rgb(122, 73, 55);
+            border: 3px solid black;
+        }
+
+        .div3 {
+            background-color: rgb(64, 87, 129);
+            /* grid-row: 2/4;
+            grid-column: 2/3; */
+            border: 3px solid black;
+        }
+
+        .div4 {
+            background-color: darkkhaki;
+            border: 3px solid black;
+        }
+
+        .div5 {
+            background-color: coral;
+            /* grid-row: 2/4;
+            grid-column: 4/5; */
+            grid-area: 2/4/4/5;
+            border: 3px solid black;
+        }
+
+        .div6 {
+            background-color: yellowgreen;
+            grid-column: 1/4;
+            border: 3px solid black;
+        }
+
+        .div7 {
+            background-color: violet;
+            grid-column: 1/span 4;
+            border: 3px solid black;
+        }
+
+
+        @media (max-width:700px) {
+            .div1{
+                background-color: chartreuse;
+                padding: 10px;
+            }
+            .container{
+                background-color: darkmagenta;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="div1">Header</div>
+        <div class="div2">Box1</div>
+        <div class="div3">Box2</div>
+        <div class="div4">Box3</div>
+        <div class="div5">Side Bar</div>
+        <div class="div6">Main Content</div>
+        <div class="div7">Footer</div>
+    </div>
+
+</body>
+
+</html>
